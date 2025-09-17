@@ -1,12 +1,10 @@
 ## Next Tasks
-    
-    
-    - >> Complete our story page
-    - POM manager
-    - find good way to switch from English to Arabic , for now we hard coded it to English
-    - Decide FINAL reporting
-    - Start Horizontal Work
+        
+    - Inprogress >> Start Horizontal Work
+    - Enable ALL possible DEBUGGERS
     - Stop POC of Visual testing , and start on Filling Forms
+    - find good way to switch from English to Arabic , for now we hard coded it to English
+
     
 
 
@@ -20,8 +18,8 @@
 
 
 ## Horizontal work
-    - push to gitHub
+
     - go inside a pipeline
-    - Remote running
+    - > Remote running + report file and reports management
     - Parallel running
     
