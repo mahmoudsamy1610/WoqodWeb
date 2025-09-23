@@ -36,10 +36,10 @@ steps:
     npx allure-commandline generate ./allure-results --clean -o ./allure-report
   displayName: 'Generate allure report'  
 
-- task: PublishBuildArtifacts@1
+- task: PublishPipelineArtifact@1
   inputs:
-    PathtoPublish: 'allure-report'
-    ArtifactName: 'AllureReport'
+    targetPath: 'allure-report'
+    artifact: 'AllureReport'
     publishLocation: 'pipeline'
   displayName: 'Publish Allure report as artifact'
 
