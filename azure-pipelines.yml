@@ -28,6 +28,11 @@ steps:
   displayName: 'Run Playwright tests (headed with xvfb)'
 
 - script: |
+    echo "Listing allure-results content:"
+    ls -R ./allure-results || true
+  displayName: 'Check allure-results folder'
+
+- script: |
     npx allure-commandline generate ./allure-results --clean -o ./allure-report
   displayName: 'Generate allure report'  
 
@@ -38,8 +43,3 @@ steps:
     publishLocation: 'Container'
   displayName: 'Publish Allure report as artifact'
 
-- task: PublishHtmlReport@1
-  inputs:
-    reportDir: 'allure-report'
-    tabName: 'Allure Report'
-    reportTitle: 'Allure Test Results'
