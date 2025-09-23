@@ -40,6 +40,6 @@ steps:
   inputs:
     PathtoPublish: 'allure-report'
     ArtifactName: 'AllureReport'
-    publishLocation: 'Container'
+    publishLocation: 'pipeline'
   displayName: 'Publish Allure report as artifact'
 
