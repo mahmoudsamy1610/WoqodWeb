@@ -30,3 +30,16 @@ steps:
 - script: |
     npx allure-commandline generate ./allure-results --clean -o ./allure-report
   displayName: 'Generate allure report'  
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'allure-report'
+    ArtifactName: 'AllureReport'
+    publishLocation: 'Container'
+  displayName: 'Publish Allure report as artifact'
+
+- task: PublishHtmlReport@1
+  inputs:
+    reportDir: 'allure-report'
+    tabName: 'Allure Report'
+    reportTitle: 'Allure Test Results'
