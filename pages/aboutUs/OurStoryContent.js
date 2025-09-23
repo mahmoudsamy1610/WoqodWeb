@@ -1,9 +1,9 @@
-// @ts-check
 import ElementMatcher from '../../utils/playwrightUtils/ElementMatcher.js';
 
 
 class OurStoryContent {
 
+   
     constructor(Page) {
         this.PageName = 'OurStory';
         this.PageUrl= '/pages/our_story';
