@@ -24,8 +24,8 @@ steps:
   displayName: 'Install Playwright browsers'
 
 - script: |
-    npm test
-  displayName: 'Run tests'
+    xvfb-run -a npm test
+  displayName: 'Run Playwright tests (headed with xvfb)'
 
 - script: |
     npm run allure
