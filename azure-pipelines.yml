@@ -16,9 +16,30 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm test
-  displayName: 'Run tests'
+    npm ci
+  displayName: 'Install dependencies'
 
 - script: |
-    npm run allure
+    npx playwright install --with-deps
+  displayName: 'Install Playwright browsers'
+
+- script: |
+    xvfb-run -a npm test
+  displayName: 'Run Playwright tests (headed with xvfb)'
+
+- script: |
+    echo "Listing allure-results content:"
+    ls -R ./allure-results || true
+  displayName: 'Check allure-results folder'
+
+- script: |
+    npx allure-commandline generate ./allure-results --clean -o ./allure-report
   displayName: 'Generate allure report'  
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: 'allure-report'
+    artifact: 'AllureReport'
+    publishLocation: 'pipeline'
+  displayName: 'Publish Allure report as artifact'
+
