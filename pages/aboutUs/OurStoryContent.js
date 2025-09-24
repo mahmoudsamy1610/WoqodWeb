@@ -8,7 +8,14 @@ class OurStoryContent {
         this.PageName = 'OurStory';
         this.PageUrl= '/pages/our_story';
         this.Page = Page;
+
+        //Elements
+        this.MainMenu = Page.locator("div.header-bg");
+        this.Banner = Page.locator("div.absolute.w-full.h-full.left-0")
+        this.BreadCrumb = Page.locator("div[class='bg-white']");
         this.TextBody = Page.locator('#detailed-body');
+        this.footer = Page.locator("footer.flex");
+
         
     }
     
@@ -18,13 +25,13 @@ class OurStoryContent {
     }
 
 
-    async OurStoryElementBaseSnapshot(ElementName) {
-        return await ElementMatcher.BaselineElementScreenShot(this.PageName, ElementName , this.TextBody);
+    async OurStoryElementBaseSnapshot(ElementName , Element) {
+        return await ElementMatcher.BaselineElementScreenShot(this.PageName, ElementName , Element);
 
     }
 
-    async OurStoryElementTestSnapshot() {
-        return await ElementMatcher.TestElement(this.TextBody);
+    async OurStoryElementTestSnapshot(Element) {
+        return await ElementMatcher.TestElement(Element);
     
     }
 

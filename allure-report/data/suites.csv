@@ -1,2 +1,7 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","11358","Verify Our story page breadcrumb","","Thu Sep 25 00:30:14 EEST 2025","passed","Thu Sep 25 00:30:25 EEST 2025","","OurStory.spec.js","",""
+"","11356","Verify Our story page body","","Thu Sep 25 00:30:14 EEST 2025","passed","Thu Sep 25 00:30:25 EEST 2025","","OurStory.spec.js","",""
+"","12767","Verify Our story page main menu","","Thu Sep 25 00:30:14 EEST 2025","failed","Thu Sep 25 00:30:26 EEST 2025","","OurStory.spec.js","",""
 "","8623","OurStory","","Sat Sep 20 15:00:32 EEST 2025","passed","Sat Sep 20 15:00:40 EEST 2025","","OurStory.spec.js","",""
+"","7818","Verify Our story page footer","","Thu Sep 25 00:30:26 EEST 2025","passed","Thu Sep 25 00:30:33 EEST 2025","","OurStory.spec.js","",""
+"","12118","Verify Our story page banner","","Thu Sep 25 00:30:14 EEST 2025","passed","Thu Sep 25 00:30:26 EEST 2025","","OurStory.spec.js","",""
