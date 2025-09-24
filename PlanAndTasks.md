@@ -1,25 +1,29 @@
-## Next Tasks
+## Next Tasks (Vertical work)
         
-    - Inprogress >> Start Horizontal Work
+    - inprogress >> Resume POC
+    - Back to Horizontal Work (on Hold)
     - Enable ALL possible DEBUGGERS
     - Stop POC of Visual testing , and start on Filling Forms
     - find good way to switch from English to Arabic , for now we hard coded it to English
 
-    
-
-
-
-## Project structre
-    - data >> Acting like a data base , to store long STATIC stuff
-    - pages >> Each file should represent a page inside the woqod website
-        - Each sub folder should represent a woqod module
-    - tests >> test files , each file should represent a page or module , will see
-    - utiles >> for classes or workers that includes methods helping test classes
-
 
 ## Horizontal work
 
-    - go inside a pipeline
-    - > Remote running + report file and reports management
+    - Start to include Khaled
+        - Forms or Rest of Visual testing or BOTH
+    - Remote running + report file and reports management  (onHold as low Priority)
     - Parallel running
-    
+
+## Ai plan
+
+    - CodeGen
+        - Using Record and play back for simple user stories, to Automatically generate code
+
+    - Code Generation
+        - Using github Capilot, to translate the normal English to Playwright code , inside VS code IDE
+
+    - Visual Testing
+        - Using computer vision to compare two pages .. pixed by pixel .. like Applitools
+
+    - Self-Healing locators
+        - Fixing the element by finding it and guessing it if changed .. to make the test success
