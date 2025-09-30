@@ -31,15 +31,18 @@ steps:
     echo "Listing allure-results content:"
     ls -R ./allure-results || true
   displayName: 'Check allure-results folder'
+  condition: always()
 
 - script: |
     npx allure-commandline generate ./allure-results --clean -o ./allure-report
   displayName: 'Generate allure report'  
+  condition: always()
 
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: 'allure-report'
-    artifact: 'AllureReport'
+    artifact: 'allure-report'
     publishLocation: 'pipeline'
   displayName: 'Publish Allure report as artifact'
+  condition: always()
 
