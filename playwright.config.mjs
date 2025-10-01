@@ -21,7 +21,9 @@ export default defineConfig({
 
   use: {  
     browserName: 'chromium',
-    headless: true,
+    viewport: null,
+    launchOptions: { args: ['--start-maximized'],},
+    headless: false,
   },
 
 
