@@ -24,7 +24,7 @@ steps:
   displayName: 'Install Playwright browsers'
 
 - script: |
-    xvfb-run -a npm test
+    npm run testci
   displayName: 'Run Playwright tests (headed with xvfb)'
 
 - script: |
