@@ -5,14 +5,16 @@
   "type": "module",
   "scripts": {
     "CleanSnapshots": "node ./utils/playwrightUtils/TestReportsCleaner.js",
-    "allure" : "allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report",
-    "test": "npm run CleanSnapshots && npx playwright test --reporter=line,allure-playwright "
+    "allure": "allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report",
+    "testci": "npm run CleanSnapshots && npx playwright test --headed",
+    "test": "npm run CleanSnapshots && npx playwright test --ui "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.2.0"
   },

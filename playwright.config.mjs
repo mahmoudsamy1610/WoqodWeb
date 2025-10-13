@@ -1,5 +1,6 @@
 
 import { defineConfig, devices } from '@playwright/test';
+import AllureReporter from 'allure-playwright';
 import path from 'path';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
@@ -10,10 +11,10 @@ export default defineConfig({
   snapshotPathTemplate: 'snapshots/{testFilePath}/{arg}{ext}',
 
   fullyParallel: true,
-  reporter: 'html',
-  timeout: 40000,
+  reporter: [    ['allure-playwright'],  ],
+  timeout: 50000,
   expect : {
-    timeout: 40000, 
+    timeout: 50000, 
   },
   
 
@@ -24,6 +25,8 @@ export default defineConfig({
     viewport: null,
     launchOptions: { args: ['--start-maximized'],},
     headless: false,
+    screenshot: "on",
+    trace:'on' ,
   },
 
 

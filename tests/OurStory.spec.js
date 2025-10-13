@@ -7,7 +7,7 @@ test('Verify Our story page main menu',async ({page}) => {
 
   const POMManager = new PomManager(page);
   const OurStoryPage = POMManager.CallOurStoryPage(); 
-  await OurStoryPage.GoToOurStoryPage(Urls.UatUrl+'en');
+  await OurStoryPage.GoToOurStoryPage(Urls.QAUrl+'en');
   await OurStoryPage.MainMenu.waitFor();
   await OurStoryPage.OurStoryElementBaseSnapshot('OurStoryMainMenu', OurStoryPage.MainMenu);
   let LiveShotName = await OurStoryPage.OurStoryElementBaseSnapshotName('OurStoryMainMenu');
@@ -20,7 +20,7 @@ test('Verify Our story page banner',async ({page}) => {
 
   const POMManager = new PomManager(page);
   const OurStoryPage = POMManager.CallOurStoryPage();
-  await OurStoryPage.GoToOurStoryPage(Urls.UatUrl+'en');
+  await OurStoryPage.GoToOurStoryPage(Urls.QAUrl+'en');
   await OurStoryPage.Banner.waitFor();
   await OurStoryPage.OurStoryElementBaseSnapshot('OurStoryBanner', OurStoryPage.Banner);
   let LiveShotName = await OurStoryPage.OurStoryElementBaseSnapshotName('OurStoryBanner');
@@ -34,7 +34,7 @@ test('Verify Our story page breadcrumb',async ({page}) => {
 
   const POMManager = new PomManager(page);
   const OurStoryPage = POMManager.CallOurStoryPage(); 
-  await OurStoryPage.GoToOurStoryPage(Urls.UatUrl+'en');
+  await OurStoryPage.GoToOurStoryPage(Urls.QAUrl+'en');
   await OurStoryPage.BreadCrumb.waitFor();
   await OurStoryPage.OurStoryElementBaseSnapshot('OurStoryBreadCrumb', OurStoryPage.BreadCrumb);
   let LiveShotName = await OurStoryPage.OurStoryElementBaseSnapshotName('OurStoryBreadCrumb');
@@ -47,7 +47,7 @@ test('Verify Our story page body',async ({page}) => {
   
   const POMManager = new PomManager(page);
   const OurStoryPage = POMManager.CallOurStoryPage(); 
-  await OurStoryPage.GoToOurStoryPage(Urls.UatUrl+'en');
+  await OurStoryPage.GoToOurStoryPage(Urls.QAUrl+'en');
   await OurStoryPage.TextBody.waitFor();
   await OurStoryPage.OurStoryElementBaseSnapshot('OurStoryBodyText', OurStoryPage.TextBody);
   let LiveShotName = await OurStoryPage.OurStoryElementBaseSnapshotName('OurStoryBodyText');
@@ -61,7 +61,7 @@ test('Verify Our story page footer',async ({page}) => {
 
   const POMManager = new PomManager(page);
   const OurStoryPage = POMManager.CallOurStoryPage(); 
-  await OurStoryPage.GoToOurStoryPage(Urls.UatUrl+'en');
+  await OurStoryPage.GoToOurStoryPage(Urls.QAUrl+'en');
   await OurStoryPage.footer.waitFor();
   await OurStoryPage.OurStoryElementBaseSnapshot('OurStoryFooter', OurStoryPage.footer);
   let LiveShotName = await OurStoryPage.OurStoryElementBaseSnapshotName('OurStoryFooter');

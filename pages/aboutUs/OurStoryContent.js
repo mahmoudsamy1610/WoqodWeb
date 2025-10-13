@@ -11,7 +11,7 @@ class OurStoryContent {
 
         //Elements
         this.MainMenu = Page.locator("div.header-bg");
-        this.Banner = Page.locator("div.absolute.w-full.h-full.left-0")
+        this.Banner = Page.locator("div.absolute.w-full.h-full.left-0");
         this.BreadCrumb = Page.locator("div[class='bg-white']");
         this.TextBody = Page.locator('#detailed-body');
         this.footer = Page.locator("footer.flex");
