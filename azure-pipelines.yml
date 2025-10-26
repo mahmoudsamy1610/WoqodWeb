@@ -46,7 +46,6 @@ steps:
   displayName: 'Publish Allure report as artifact'
   condition: always()
 
-steps:
 - task: PublishAllureReport@1
   displayName: 'Publish Allure Report'
   inputs:
