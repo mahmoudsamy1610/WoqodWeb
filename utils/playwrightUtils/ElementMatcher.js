@@ -1,10 +1,10 @@
 
     class ElementMatcherClass {
-        static BaselineElementScreenShot(PageName, ElementName, ElementHandle) {
+        static async BaselineElementScreenShot(PageName, ElementName, ElementHandle) {
             let ImageName = PageName + '-' + ElementName + '.png';
             let DirName = 'snapshots/' + PageName + '.spec.js';
             let Path = DirName + '/' + ImageName;
-            ElementHandle.screenshot({ path: Path });
+            await ElementHandle.screenshot({ path: Path });
         }
 
         static GetElementBaseShotName(PageName, ElementName) {
@@ -12,8 +12,8 @@
             return ImageName;
         }
 
-        static TestElement(ElementHandle) {
-            return ElementHandle.screenshot();
+        static async TestElement(ElementHandle) {
+            return await ElementHandle.screenshot();
         }
     }
 

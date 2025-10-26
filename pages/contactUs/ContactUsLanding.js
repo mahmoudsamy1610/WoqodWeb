@@ -1,11 +1,11 @@
 
 
-export class ContacUsLanding {
+ class ContacUsLanding {
     
     constructor(page) {
         this.page = page;
         this.PageName = 'ContacUsLanding';
-        this.PageUrl= '/contact-us';
+        this.PageUrl= 'contact-us';
         
         //Elements
         this.Form = page.locator("form.w-full.bg-white.ng-untouched.ng-pristine.ng-invalid");
@@ -23,6 +23,7 @@ export class ContacUsLanding {
         this.Description = page.locator("#comment");
         this.Submit = page.getByRole('button', { name: 'Submit' });
         this.SuccessMessage = page.locator("div.modal-body > section > div > h1");
+        
         
 
         //this.FeedbackCategory
