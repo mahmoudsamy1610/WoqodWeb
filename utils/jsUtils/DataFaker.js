@@ -1,27 +1,27 @@
-import { faker } from '@faker-js/faker';
+import { fakerEN } from '@faker-js/faker';
 
 class DataFaker {
 
     static FakeName() {
-        return faker.person.fullName();
+        return fakerEN.person.fullName();
     }
 
     static FakeEmail() {
-        return faker.internet.email();
+        return fakerEN.internet.email();
     }
 
     static FakeMobileNumber() {
         // Generates a random mobile number in international format
-        return faker.phone.number({ style: 'international' }) // '+15551234567'
+        return fakerEN.phone.number({ style: 'international' }) // '+15551234567'
 
     }
 
     static FakeCompanyName() {
-        return faker.company.name();
+        return fakerEN.company.name();
     }
 
     static FakeComment() {
-        return faker.lorem.sentence(22);
+        return fakerEN.word.words(13);
     }
 
     

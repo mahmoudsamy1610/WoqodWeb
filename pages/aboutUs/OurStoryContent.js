@@ -6,15 +6,15 @@ class OurStoryContent {
    
     constructor(Page) {
         this.PageName = 'OurStory';
-        this.PageUrl= '/pages/our_story';
+        this.PageUrl= 'pages/our_story';
         this.Page = Page;
 
         //Elements
         this.MainMenu = Page.locator("div.header-bg");
         this.Banner = Page.locator("div.absolute.w-full.h-full.left-0");
         this.BreadCrumb = Page.locator("div[class='bg-white']");
-        this.TextBody = Page.locator('#detailed-body');
-        this.footer = Page.locator("footer.flex");
+        this.TextBody = Page.locator("main > div > app-detailed-body");
+        this.Footer = Page.locator("footer.flex");
 
         
     }

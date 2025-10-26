@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   testDir: './tests',
   snapshotPathTemplate: 'snapshots/{testFilePath}/{arg}{ext}',
-  workers: 2,
+
   fullyParallel: true,
   reporter: [    ['allure-playwright'],  ],
   timeout: 50000,
@@ -17,8 +17,8 @@ export default defineConfig({
     timeout: 50000, 
   },
   
-  
- projects: [
+
+  projects: [
     {name: 'QA',
       use: {
         baseURL: 'https://mdqa.woqod.com/web/en/',
@@ -38,10 +38,11 @@ export default defineConfig({
 
 
   use: {  
+    
     browserName: 'chromium',
     viewport: null,
     launchOptions: { args: ['--start-maximized'],},
-    headless: false,
+    headless: true,
     screenshot: "on",
     trace:'on' ,
   },
