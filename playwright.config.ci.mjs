@@ -37,12 +37,13 @@ export default defineConfig({
   ], 
 
 
-  use: {  
-    
+  use: {
+
     browserName: 'chromium',
     viewport: null,
     launchOptions: { args: ['--start-maximized'],},
     headless: true,
+    ignoreHTTPSErrors: true,
     screenshot: "on",
     trace:'on' ,
   },
